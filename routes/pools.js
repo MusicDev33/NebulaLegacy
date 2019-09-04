@@ -11,16 +11,6 @@ const Utils = require("../utils/Utility")
 const Async = require('async');
 var VerifyToken = require('./middleware/VerifyToken');
 
-var badWords = ["nigga", "nigger", "ass", "bitch", "shit", "tits", "fuck", "boobs", "damn", "asshole", "clit", "cunt", "butt",
-"sex", "cunnilingus", "fucker", "cock", "cocksucker", "motherfucker", "pussy", "puss", "bukkake", "cuck", "piss", "pee",
-"tiktok", "smut", "mofo", "whore", "slut", "thot", "arse", "arsehole", "bastard", "fag", "faggot", "beaner", "bitchass",
-"bullshit", "chinc", "chink", "choad", "chode", "goddamn", "godamn", "dammit", "coochie", "coochy", "cooch", "coon", "cooter",
-"semen", "cumming", "dick", "dickhead", "dipshit", "dumbass", "smartass", "fatass", "dumbfuck", "dickhole", "faggit",
-"fucking", "shitting", "bitching", "shits", "shithead", "bitches", "gooch", "gringo", "hoe", "heeb", "honkey", "jackass",
-"jap", "jigaboo", "jizz", "kike", "kooch", "kock", "kyke", "kunt", "muffdiver", "milf", "minge", "masturbate", "masterbate",
-"masturbating", "masterbating", "nigaboo", "nigaboos", "niggas", "nigguhs", "niggers", "niglet", "niglett", "niglets",
-"nigletts", "queef", "ruski", "sandnigger", "spic", "spick", "twat", "slipback", "wetback", "masturb8", "masterb8"]
-
 router.post('/createpool', (req, res, next) => {
   console.log(req.body.coordinates);
   let newPool = new Pool({
